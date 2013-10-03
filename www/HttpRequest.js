@@ -6,7 +6,7 @@ var cinedayAndroid = {
             'HttpRequest', // mapped to our native Java class called "HttpRequest"
             'makeRequest', // with this action name
             [json]           // and this array of custom arguments to create our entry
-                
+            );    
     }
 }
 module.exports = cinedayAndroid;
