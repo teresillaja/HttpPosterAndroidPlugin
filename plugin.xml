@@ -22,6 +22,6 @@
             </feature>
         </config-file>
  
-        <source-file src="src/HttpRequest.java" target-dir="com/orange/labs/plugins" />      
+        <source-file src="src/HttpRequest.java" target-dir="src/com/orange/labs/plugins" />      
      </platform>          
 </plugin>
