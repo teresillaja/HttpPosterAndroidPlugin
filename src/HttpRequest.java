@@ -4,7 +4,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class CinedayRequest extends CordovaPlugin {
+public class HttpRequest extends CordovaPlugin {
 	public static final String ACTION_MAKE_REQUEST_ENTRY = "makeRequest";
 	CallbackContext generalCallback;
 
