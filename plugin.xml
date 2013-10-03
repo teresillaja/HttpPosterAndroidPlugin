@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
  
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-           id="com.orange.labs.cinedayplugin"
+           id="com.orange.labs.plugins.httprequest"
       version="0.1.0">
     <name>HttPRequest</name>
     <description>This plugin allows to make a native http requests, it returns the content and the cookies got after the request</description>
@@ -17,8 +17,8 @@
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="CinedayAndroid">
-                <param name="android-package" value="com.orange.labs.plugins.CinedayRequest"/>
+            <feature name="HttpRequest">
+                <param name="android-package" value="com.orange.labs.plugins.HttpRequest"/>
             </feature>
         </config-file>
  
