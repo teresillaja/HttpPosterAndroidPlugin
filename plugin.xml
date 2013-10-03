@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.orange.labs.cinedayplugin"
+      version="0.1.0">
+    <name>CinedayRequest</name>
+    <description>This plugin allows to get the cookies needed to retrieve cineday coupons</description>
+    <license>Private</license>
+    <keywords>phonegap,calendar</keywords>
+ 
+ 
+    <js-module src="www/calendar.js" name="Calendar">
+        <clobbers target="window.calendar" />
+    </js-module>
+    
+    <js-module src="www/CinedayRequest.js" name="CinedayAndroid">
+        <clobbers target="window.calendar" />
+    </js-module>
+ 
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CinedayAndroid">
+                <param name="android-package" value="com.orange.labs.cinedayandroid.CinedayRequest"/>
+            </feature>
+        </config-file>
+ 
+        <source-file src="src/CinedqayRequest.java" target-dir="com/orange/lavs/cinedayandroid" />      
+     </platform>          
+</plugin>
