@@ -77,6 +77,7 @@ public class HttpRequest extends CordovaPlugin {
 								//getting the status code
 								StatusLine statusLine = response
 										.getStatusLine();
+								Log.d("---- sTATUS lINE", ""+statusLine);
 								// getting the body of the message
 								StringBuilder stringBuilder = new StringBuilder();
 								HttpEntity entity = response
@@ -241,10 +242,12 @@ public class HttpRequest extends CordovaPlugin {
 		String[] cookieRaw = cookie.split(";");
 		try {
 			for (int x = 0; x < cookieRaw.length; x++) {
+				Log.d("------- the raw cookie",  cookieRaw[x]);
 				String[] singleCookie = cookieRaw[x].split("=");
 				if (x == 0) {
 					cookieName = singleCookie[0];
-					tempCookie.accumulate("value", singleCookie[1]);
+					//tempCookie.accumulate("value", singleCookie[1]);
+					tempCookie.accumulate("value",  cookie);
 
 				} else {
 					tempCookie.accumulate(singleCookie[0].replace(" ", ""), singleCookie[1]);
