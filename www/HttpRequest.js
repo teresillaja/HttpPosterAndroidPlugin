@@ -1,5 +1,5 @@
 cordova.define("com.orange.labs.plugins.httprequest.HttpRequest", function(require, exports, module) {var cinedayAndroid = {
-    createEvent: function(json,successCallback, errorCallback) {
+    makeRequest: function(json,successCallback, errorCallback) {
  			cordova.exec(
             // success callback function
              function(resp) {
