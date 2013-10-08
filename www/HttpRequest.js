@@ -1,12 +1,17 @@
-var cinedayAndroid = {
+cordova.define("com.orange.labs.plugins.httprequest.HttpRequest", function(require, exports, module) {var cinedayAndroid = {
     createEvent: function(json,successCallback, errorCallback) {
  			cordova.exec(
-            successCallback, // success callback function
-            errorCallback, // error callback function
+            // success callback function
+             function(resp) {
+            	successCallback(resp);
+       		 },
+       		 function(resp){
+       		 	errorCallback(resp);
+       		 }, // error callback function
             'HttpRequest', // mapped to our native Java class called "HttpRequest"
             'makeRequest', // with this action name
             [json]           // and this array of custom arguments to create our entry
             );    
     }
 }
-module.exports = cinedayAndroid;
+module.exports = cinedayAndroid;});
