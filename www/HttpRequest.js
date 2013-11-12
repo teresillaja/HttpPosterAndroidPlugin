@@ -1,4 +1,4 @@
-cordova.define("com.orange.labs.plugins.httprequest.HttpRequest", function(require, exports, module) {var cinedayAndroid = {
+var httprequest = {
     makeRequest: function(json,successCallback, errorCallback) {
  			cordova.exec(
             // success callback function
@@ -14,4 +14,4 @@ cordova.define("com.orange.labs.plugins.httprequest.HttpRequest", function(requi
             );    
     }
 }
-module.exports = cinedayAndroid;});
+module.exports = httprequest;

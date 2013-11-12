@@ -93,7 +93,7 @@ public class HttpRequest extends CordovaPlugin {
 								}
 								responseJson.put("content",
 										stringBuilder.toString());
-								
+
 								int statusCode = statusLine.getStatusCode();
 								responseJson.put("statusCode",
 										statusCode);
@@ -148,7 +148,7 @@ public class HttpRequest extends CordovaPlugin {
 											e.getMessage());
 									responseJson.put("statusCode",
 											0);
-									
+
 								} catch (JSONException e1) {
 									// TODO Auto-generated catch block
 									e1.printStackTrace();
@@ -164,7 +164,7 @@ public class HttpRequest extends CordovaPlugin {
 											e.getMessage());
 									responseJson.put("statusCode",
 											0);
-									
+
 								} catch (JSONException e1) {
 									// TODO Auto-generated catch block
 									e1.printStackTrace();
@@ -176,7 +176,7 @@ public class HttpRequest extends CordovaPlugin {
 							callbackContext.success(); // Thread-safe.
 						}
 					});
-					
+
 				}
 
 				return true;
@@ -193,14 +193,14 @@ public class HttpRequest extends CordovaPlugin {
 
 	private JSONObject getCookies(HttpResponse response) {
 		Map<String, String> cookies = new HashMap<String, String>();
-		
+
 		JSONObject headersJson = null;
 		result = new JSONObject();
 		try {
 			cookiesJson = new JSONObject();
 			headersJson = new JSONObject();
 			// cookiesJson = new J
-			
+
 
 			org.apache.http.Header[] headers = response.getAllHeaders();
 
@@ -221,7 +221,7 @@ public class HttpRequest extends CordovaPlugin {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		try {
 			result.accumulate("cookies", cookiesJson);
 			result.accumulate("headers", headersJson);
@@ -255,7 +255,7 @@ public class HttpRequest extends CordovaPlugin {
 			}
 			cookiesJson.accumulate(cookieName, tempCookie);
 			//cookiesJson.accumulate("cookies", jsonCookie);
-			
+
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
